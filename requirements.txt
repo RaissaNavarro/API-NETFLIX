@@ -1,0 +1,3 @@
+djangorestframework
+django_restframework
+django-cors-headers
