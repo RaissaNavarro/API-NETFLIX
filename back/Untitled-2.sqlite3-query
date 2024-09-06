@@ -1,0 +1,76 @@
+-- database: ./db.sqlite3
+
+SELECT * FROM api_filmes;
+
+INSERT INTO api_filmes (titulo, genero, ano, idioma, classif)
+
+VALUES
+
+('O Poderoso Chefão', 'Drama', '1972', 'Inglês', 'R'),
+
+('A Vida é Bela', 'Comédia', '1997', 'Italiano', 'PG-13'),
+
+('Pulp Fiction', 'Crime', '1994', 'Inglês', 'R'),
+
+('Matrix', 'Ficção Científica', '1999', 'Inglês', 'R'),
+
+('O Senhor dos Anéis: A Sociedade do Anel', 'Aventura', '2001', 'Inglês', 'PG-13'),
+
+('Clube da Luta', 'Drama', '1999', 'Inglês', 'R'),
+
+('A Origem', 'Ficção Científica', '2010', 'Inglês', 'PG-13'),
+
+('O Grande Lebowski', 'Comédia', '1998', 'Inglês', 'R'),
+
+('Gladiador', 'Aventura', '2000', 'Inglês', 'R'),
+
+('Casablanca', 'Drama', '1942', 'Inglês', 'PG'),
+
+('O Iluminado', 'Terror', '1980', 'Inglês', 'R'),
+
+('O Labirinto do Fauno', 'Fantasia', '2006', 'Espanhol', 'R'),
+
+('O Exorcista', 'Terror', '1973', 'Inglês', 'R'),
+
+('A Lista de Schindler', 'Drama', '1993', 'Inglês', 'R'),
+
+('Avatar', 'Ficção Científica', '2009', 'Inglês', 'PG-13'),
+
+('O Discurso do Rei', 'Drama', '2010', 'Inglês', 'R'),
+
+('Os Infiltrados', 'Crime', '2006', 'Inglês', 'R'),
+
+('Jurassic Park', 'Aventura', '1993', 'Inglês', 'PG-13'),
+
+('Star Wars: Episódio IV - Uma Nova Esperança', 'Aventura', '1977', 'Inglês', 'PG'),
+
+('O Pianista', 'Drama', '2002', 'Polonês', 'R');
+
+
+CREATE TABLE genero (
+    generoFilme varchar(255)
+);
+
+
+INSERT INTO genero (generoFilme) VALUES ('Drama');
+INSERT INTO genero (generoFilme) VALUES ('Comédia');
+INSERT INTO genero (generoFilme) VALUES ('Crime');
+INSERT INTO genero (generoFilme) VALUES ('Ficção Científica');
+INSERT INTO genero (generoFilme) VALUES ('Aventura');
+INSERT INTO genero (generoFilme) VALUES ('Terror');
+INSERT INTO genero (generoFilme) VALUES ('Fantasia');
+
+INSERT INTO genero (generoFilme)
+SELECT DISTINCT genero
+FROM api_filmes;
+
+UPDATE api_filmes SET genero = "";
+
+
+
+
+
+
+
+
+ 

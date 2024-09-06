@@ -1,0 +1,4 @@
+-- database: ../db.sqlite3
+
+SELECT * FROM genero
+ORDER BY `generoFilme` DESC;
